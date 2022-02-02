@@ -169,7 +169,7 @@
       instance = lottie.loadAnimation({
         ...options,
         [srcAttrib]: srcParsed,
-      });
+      } as any);
     } catch (err) {
       currentState = PlayerState.Error;
       dispatch(PlayerEvents.Error);
@@ -456,7 +456,7 @@
   /**
    * Sets background color.
    */
-  export const setBackground = (value) => {
+  export const setBackground = (value: string) => {
     background = value;
   };
 
@@ -565,7 +565,7 @@
   }
 
   .lottie-player.is-zoomed {
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;

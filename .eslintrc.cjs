@@ -1,4 +1,4 @@
-const ignoreWarnings = new Set(['a11y-no-onchange', 'a11y-label-has-associated-control', 'a11y-mouse-events-have-key-events']);
+const ignoreWarnings = new Set(['a11y-no-onchange', 'a11y-label-has-associated-control', 'a11y-mouse-events-have-key-events', 'a11y-mouse-events-have-key-events']);
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -22,4 +22,7 @@ module.exports = {
     es2017: true,
     node: true,
   },
+  rules:{
+    '@typescript-eslint/no-explicit-any': 'off',
+  }
 }
