@@ -538,10 +538,8 @@
         {background}
         {currentState}
         {frame}
-        {freeze}
         {instance}
         {loop}
-        {play}
         {progress}
         {seek}
         {snapshot}

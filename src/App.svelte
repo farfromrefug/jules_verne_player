@@ -11,7 +11,7 @@
   let storyPath: string;
   let forcedSize;
   onMount(() => {
-    document.body.onresize = function (ev: UIEvent) {
+    document.body.onresize = function () {
       forcedSize = Math.min(window.innerWidth, window.innerHeight - button.clientHeight * 2);
     };
     document.body.onresize(null);
@@ -174,7 +174,6 @@
       'spacer',
       'snapshot',
       'info',
-      'zoom',
     ]}
     on:play={onPlay}
     on:seek={onSeek}

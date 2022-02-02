@@ -82,8 +82,10 @@
 <div
   class="popover"
   on:mousedown
+  on:focus={show}
   on:mouseover={show}
   on:mouseout={hide}
+  on:blur={hide}
   on:mouseup
   on:mousewheel>
   <div bind:this={_triggerRef}>

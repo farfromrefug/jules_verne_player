@@ -16,11 +16,11 @@
   export let background;
   export let currentState;
   export let frame;
-  export let freeze;
+  // export let freeze;
   export let instance;
   export let layout = ControlsLayoutOptions;
   export let loop;
-  export let play;
+  // export let play;
   export let progress;
   export let seek;
   export let snapshot;
@@ -164,8 +164,6 @@
     {:else if item === 'snapshot'}
       <div
         class=""
-        on:mouseout={() => currentState === PlayerState.Frozen && play()}
-        on:mouseover={() => currentState !== PlayerState.Paused && freeze()}
       >
         <Popover color="#fff" on:mousewheel={(e) => seek(frame + (e.deltaY > 0 ? -1 : 1))}>
           <div class="btn" slot="target">
@@ -248,8 +246,6 @@
           class="frame-number"
           type="text"
           bind:value={formattedFrame}
-          on:mouseout={() => currentState === PlayerState.Frozen && play()}
-          on:mouseover={() => currentState !== PlayerState.Paused && freeze()}
           on:input={(e) => seek(e.target.value)}
           on:mousewheel={(e) => seek(frame + (e.deltaY > 0 ? -1 : 1))}
         />

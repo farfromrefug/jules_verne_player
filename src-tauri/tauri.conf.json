@@ -12,10 +12,10 @@
     "bundle": {
       "active": true,
       "targets": [
-        "dmg",
+        "app",
         "msi"
       ],
-      "identifier": "com.example.tauri-template",
+      "identifier": "com.akylas.julesverne.player",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -51,24 +51,19 @@
       "active": false
     },
     "allowlist": {
+      "all": false,
       "dialog": {
-        "all": true
-      },
-      "os": {
-        "all": true
+        "open": true
       },
       "path": {
         "all": true
       },
       "fs": {
-        "all": true
-      },
-      "shell": {
-        "open": true
+        "readTextFile": true
       }
     },
     "security": {
-      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+      "csp": "default-src blob: asset: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
     }
   }
 }
